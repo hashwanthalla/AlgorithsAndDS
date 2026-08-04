@@ -2,9 +2,31 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Compile and run Java",
+            "label": "Compile and run Java (active file)",
             "type": "shell",
             "command": "javac \"${file}\" && java -cp \"${fileDirname}\" ${fileBasenameNoExtension} < \"${fileDirname}/input.txt\" > \"${fileDirname}/output.txt\"",
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": {
+                "owner": "java",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*\\.java):(\\d+):\\s+(error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "severity": 3,
+                    "message": 4
+                }
+            }
+        },
+        {
+            "label": "Run Basics.java",
+            "type": "shell",
+            "command": "javac \"/Users/hashwanthalla/Desktop/InterviewPrep/AlgorithsAndDS/Basics.java\" && java -cp \"/Users/hashwanthalla/Desktop/InterviewPrep/AlgorithsAndDS\" Basics < \"/Users/hashwanthalla/Desktop/InterviewPrep/AlgorithsAndDS/input.txt\" > \"/Users/hashwanthalla/Desktop/InterviewPrep/AlgorithsAndDS/output.txt\"",
             "presentation": {
                 "reveal": "always"
             },

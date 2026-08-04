@@ -1,6 +1,10 @@
+import java.util.*;
 public class Basics {
 
     public static void main(String[] args) {
-      System.out.println("Hashwanth Alla");
+      Scanner sc = new Scanner(System.in);
+      double num = sc.nextDouble();
+      System.out.println(num);
+      sc.close();
     }
 }
