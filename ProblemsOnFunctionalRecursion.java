@@ -5,6 +5,8 @@ import java.io.*;
 public class ProblemsOnFunctionalRecursion {
     static int[]a;
     static int n=0 ;
+
+    //space complexity o(n) and time complexity (2 power n)
     public static void recursiveSwap(int i){
          if(i>=n/2){
              return;
